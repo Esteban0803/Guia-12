@@ -24,12 +24,17 @@ public class Cuadrado implements Formas{
 
     @Override
     public void dibujar() {
+        //Perdonen gente, pero cometí un pecado, se me cerro la cabeza
+        //y no sabia como representarlos con "*" asi que le pedi ayuda la chatGPT
+        //hago aclaraciones para las partes mas raritas del codigo
         int basee = (int) Math.round(base);
         int alturaa = (int) Math.round(altura);
         
         for (int y = 0; y < alturaa; y++) {
             for (int x = 0; x < basee; x++) {
                 if (y == 0 || y == alturaa - 1 || x == 0 || x == basee - 1) {
+                    //Esto se utiliza para verificar si se encuentra el primer punto
+                    //y el ultimo punto de las "filas" y "columnas" (y=filas, x=columnas)
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
